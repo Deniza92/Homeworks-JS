@@ -1,0 +1,82 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+   }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows:  minmax(100px, auto)
+}
+.calculator > button {
+    border: 1px solid black;
+    font-size: 2rem;
+    outline: 1px solid white;
+    cursor: pointer;
+    height: 70px;
+       
+}
+
+
+.clear {
+    background-color: rgb(205, 197, 197);
+    grid-column: span 2;
+   
+}
+.display {
+    grid-column: 1/-1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+}
+.display .previous-operand {
+    color:rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+   }
+.current-operand {
+    color:white;
+    font-size: 2.5rem;
+   }
+.number {
+    background-color: rgb(205, 197, 197);
+    border: 1px solid black;
+   }
+.decimal {
+    background-color: rgb(205, 197, 197);
+    border: 1px solid black; 
+
+    }
+
+
+.number-zero {
+   background-color:  rgb(205, 197, 197);
+   grid-column: span 2;
+   
+
+}
+
+ .operation {
+    background-color: yellow;
+}
+
+   #equals {
+    background-color: yellow;
+}
+  .delete {
+    background-color: rgb(205, 197, 197);
+  }
+ 
